@@ -1,0 +1,48 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>zxwz</groupId>
+  <artifactId>zxwz</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+  <dependencies>
+  <!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
+	<dependency>
+	    <groupId>javax.servlet</groupId>
+	    <artifactId>javax.servlet-api</artifactId>
+	    <version>4.0.1</version>
+	    <scope>provided</scope>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/com.jspsmart/Upload -->
+	<!-- https://mvnrepository.com/artifact/com.jspsmart/upload -->
+	<!--<dependency>
+	    <groupId>com.jspsmart</groupId>
+	    <artifactId>upload</artifactId>
+	    <version>1.0</version>
+	</dependency>  
+	-->
+	
+	<dependency>
+			<groupId>com.jspsmart</groupId>
+			<artifactId>upload</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+            <systemPath>${project.basedir}/WebRoot/WEB-INF/lib/jspsmartupload.jar</systemPath>
+	</dependency>
+
+	
+	
+  </dependencies>
+  <build>
+    <sourceDirectory>src</sourceDirectory>
+    <plugins>
+      <plugin>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>3.0.0</version>
+        <configuration>
+          <warSourceDirectory>WebRoot</warSourceDirectory>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
